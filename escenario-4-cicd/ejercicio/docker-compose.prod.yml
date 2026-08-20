@@ -1,0 +1,9 @@
+﻿services:
+  app:
+    image: ${DOCKERHUB_USERNAME}/app-cicd-ejercicio:latest
+    container_name: cicd_app_prod
+    ports:
+      - "3003:3000"
+    environment:
+      ENV: production
+    restart: always

@@ -1,0 +1,8 @@
+﻿services:
+  app:
+    build: .
+    container_name: ejercicio_cicd_app
+    ports:
+      - "3003:3000"
+    environment:
+      ENV: development
