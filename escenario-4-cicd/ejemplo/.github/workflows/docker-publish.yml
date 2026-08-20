@@ -1,4 +1,4 @@
-﻿name: Build y Push a DockerHub
+name: Build y Push a DockerHub
 
 on:
   push:
@@ -18,7 +18,7 @@ jobs:
       contents: read
       packages: write
     steps:
-      - name: Checkout del código
+      - name: Checkout del c�digo
         uses: actions/checkout@v4
 
       - name: Set up Docker Buildx
@@ -46,7 +46,7 @@ jobs:
       - name: Build y Push imagen
         uses: docker/build-push-action@v5
         with:
-          context: ./src
+          context: ./escenario-4-cicd/ejemplo
           push: ${{ github.event_name != 'pull_request' }}
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
