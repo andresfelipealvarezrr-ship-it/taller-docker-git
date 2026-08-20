@@ -26,7 +26,7 @@ jobs:
       - name: Instalar dependencias
         run: |
           pip install -r escenario-4-cicd/ejercicio/src/requirements.txt
-          pip install pytest httpx
+          pip install pytest httpx==0.27.2
 
       - name: Ejecutar tests
         run: pytest escenario-4-cicd/ejercicio/tests/
